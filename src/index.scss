@@ -1,0 +1,17 @@
+@import './Components/scss/App.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 2em;
+    background-color: $page-color;
+}

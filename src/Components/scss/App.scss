@@ -1,0 +1,103 @@
+@import './colors.scss';
+
+.estate-compare {
+    &__main-title {
+        padding-bottom: 0.5em;
+        border-bottom: $heading_color 1px solid;
+        color: $heading_color;
+        text-align: center;
+    }
+    &__list-container {
+        min-width: 100%;
+        height: 8.5em;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 0.5em;
+        align-items: center;
+        @media only screen and (max-width: 900px) {
+            height: auto;
+            grid-template-columns: repeat(5, 1fr);
+            grid-row: 1fr 1fr;
+        }
+    }
+    &__scroll {
+        height: 2em;
+        padding-top: 0.3em;
+        border-radius: 50%;
+        cursor: pointer;
+        user-select: none;
+        font-size: 0.8em;
+        background-color: black;
+        text-align: center;
+        color: $heading_color;
+        &--off {
+            background-color: $heading_color;
+        }
+    }
+    &__list-item {
+        height: 100%;
+        position: relative;
+        font-size: 0.6em;
+        cursor: pointer;
+        &--selected {
+            background-color: yellow;
+        }
+    }
+    &__photo {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    &__label {
+        margin: 0;
+        padding: 0.4em 0;
+    }
+    &__comparison-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__compared-item {
+        max-width: 25%;
+        height: auto;
+        margin: 1em;
+        padding: 0.2em;
+        border: 1px $text_color solid;
+        border-radius: 3px;
+        font-size: 0.8em;
+    }
+    &__value {
+        margin: 0.1em;
+        padding: 0.2em;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+        background-color: $best_color;
+        &--worst {
+            background-color: $worst_color;
+        }
+        &--plain {
+            background-color: $page-color;
+        }
+        &--higher {
+            height: 3em;
+            background-color: $page-color;
+        }
+    }
+    &__value-tag {
+        padding: 0.2em;
+        &--bold {
+            font-weight: bold;
+        }
+    }
+    &__agency {
+        height: 4em;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        width: 4em;
+    }
+}
